@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Dennis J. Añano | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #2c5282, #2b6cb0);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            padding: 1rem;
+            cursor: pointer;
+            font-weight: 600;
+            color: #2c5282;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li:hover, nav ul li.active {
+            background: #ebf4ff;
+            color: #2b6cb0;
+            border-bottom: 3px solid #2b6cb0;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: #2c5282;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        .card h3 {
+            color: #2b6cb0;
+            margin-bottom: 0.5rem;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .status.done { background: #f0fff4; color: #22543d; }
+        .status.pending { background: #fef5e7; color: #744210; }
+        .status.in-progress { background: #ebf8ff; color: #2a4365; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #2d3748;
+            color: white;
+            margin-top: 2rem;
+        }
+
+        /* Edit Note */
+        .edit-note {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>Añano, Mark Dennis J.</h1>
+    <p>BSCS-3B | Cavite State University</p>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <ul>
+        <li class="tab-link active" data-section="quizzes">Quizzes</li>
+        <li class="tab-link" data-section="activities">Activities</li>
+        <li class="tab-link" data-section="examination">Examination</li>
+        <li class="tab-link" data-section="projects">Projects</li>
+    </ul>
+</nav>
+
+<!-- Main Content -->
+<main>
+    <div class="edit-note">
+        💡 <strong>Only you can edit this file:</strong> Open it in Notepad or any code editor, change the text inside, and save it. No one else can change it unless you share your file.
+    </div>
+
+    <!-- Quizzes Section -->
+    <section id="quizzes" class="section active">
+        <h2 class="section-title">📝 Quizzes</h2>
+        
+        <div class="card">
+            <h3>Quiz 1 — Introduction to [Subject]</h3>
+            <p>Covered basic concepts and fundamentals.</p>
+            <span class="status done">Completed</span>
+        </div>
+
+        <div class="card">
+            <h3>Quiz 2 — Data Structures</h3>
+            <p>Topics: Arrays, Linked Lists, and Stacks.</p>
+            <span class="status done">Completed</span>
+        </div>
+
+        <div class="card">
+            <h3>Quiz 3 — Operating Systems</h3>
+            <p>Process management and memory allocation.</p>
+            <span class="status pending">To be Taken</span>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="section">
+        <h2 class="section-title">📋 Activities</h2>
+        
+        <div class="card">
+            <h3>Activity 1 — System Analysis</h3>
+            <p>Created flowcharts and IPO diagrams for student system.</p>
+            <span class="status done">Submitted</span>
+        </div>
+
+        <div class="card">
+            <h3>Activity 2 — HTML & CSS Practice</h3>
+            <p>Built basic web pages with styling.</p>
+            <span class="status done">Submitted</span>
+        </div>
+
+        <div class="card">
+            <h3>Activity 3 — Database Design</h3>
+            <p>Making ER diagrams and table relationships.</p>
+            <span class="status in-progress">In Progress</span>
+        </div>
+    </section>
+
+    <!-- Examination Section -->
+    <section id="examination" class="section">
+        <h2 class="section-title">📄 Examinations</h2>
+        
+        <div class="card">
+            <h3>Midterm Examination</h3>
+            <p>Covers all lessons from Week 1 to Week 9.</p>
+            <span class="status done">Done</span>
+        </div>
+
+        <div class="card">
+            <h3>Final Examination</h3>
+            <p>Comprehensive exam covering full semester topics.</p>
+            <span class="status pending">Scheduled</span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="section-title">💻 Projects</h2>
+        
+        <div class="card">
+            <h3>Student Information & Enrollment System</h3>
+            <p>A system that manages student data, enrollment, and attendance monitoring.</p>
+            <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Database</p>
+            <span class="status in-progress">Ongoing</span>
+        </div>
+
+        <div class="card">
+            <h3>Personal Portfolio Website</h3>
+            <p>This page — shows my academic work and progress.</p>
+            <span class="status done">Completed</span>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 Añano, Mark Dennis J. | BSCS-3B | Cavite State University</p>
+    <p style="margin-top: 0.5rem; font-size: 0.85rem;">All rights reserved. Only the owner may edit this file.</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+    // Tab switching logic
+    const tabs = document.querySelectorAll('.tab-link');
+    const sections = document.querySelectorAll('.section');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Remove active class from all tabs
+            tabs.forEach(t => t.classList.remove('active'));
+            // Hide all sections
+            sections.forEach(sec => sec.classList.remove('active'));
+            
+            // Activate clicked tab
+            tab.classList.add('active');
+            // Show matching section
+            const sectionId = tab.getAttribute('data-section');
+            document.getElementById(sectionId).classList.add('active');
+        });
+    });
+</script>
+
+</body>
+</html>
